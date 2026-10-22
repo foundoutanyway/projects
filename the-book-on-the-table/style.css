@@ -86,6 +86,13 @@ max-width:880px;margin:7vh auto 8vh;background:#f5eee3;color:var(--ink);padding:
 .totop{font-size:.9rem}
 .sheet .end{margin-top:56px;padding-top:24px;border-top:1px solid var(--line)}
 .sheet .end p{margin:.4em 0}
+/* the tin on the afterword page, and where it leads */
+.tinwrap{position:relative;display:block}
+.tin{position:absolute;left:60.4%;top:71.5%;width:16.6%;height:11.7%;cursor:default}
+.bell{position:absolute;left:60.1%;top:65.1%;width:8.3%;height:8.1%;cursor:default}
+.coda-lede{max-width:720px;margin:0 auto 2.4em;font:italic 1.15rem/1.6 var(--display);color:var(--soft)}
+.coda .prose blockquote>p:first-child::first-letter{float:none;font:inherit;margin:0;color:inherit}
+.coda figure{margin-top:7vh}
 /* the about page */
 .about{max-width:760px;margin:0 auto;padding:12vh 24px 10vh}
 .about h1{font:400 clamp(2.4rem,6vw,4rem)/1 var(--display);letter-spacing:.04em;margin:0 0 .3em}
