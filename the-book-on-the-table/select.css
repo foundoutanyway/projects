@@ -1,0 +1,26 @@
+body.select-screen{margin:0;background:#120e0b;color:#f3e9da;overflow:hidden;font-family:"EB Garamond","Palatino Linotype","Book Antiqua",Georgia,serif}
+.screen h1,.slot .choice{font-family:"Cormorant Garamond","Palatino Linotype","Book Antiqua",Georgia,serif}
+.screen{position:relative;height:100vh;height:100dvh;display:flex;flex-direction:column}
+.screen h1{position:absolute;top:0;left:0;right:0;z-index:3;margin:0;padding:22px 16px 40px;text-align:center;font-size:clamp(1rem,2.6vw,1.6rem);letter-spacing:.32em;text-transform:uppercase;font-weight:normal;color:#f3e9da;background:linear-gradient(#120e0bee,#120e0b00);pointer-events:none}
+.screen .ask{position:absolute;bottom:0;left:0;right:0;z-index:3;margin:0;padding:48px 16px 20px;text-align:center;font-style:italic;color:#d9cbb6;background:linear-gradient(#120e0b00,#120e0bf0);pointer-events:none;font-size:clamp(.85rem,1.8vw,1.05rem)}
+.slots{flex:1;display:flex;min-height:0}
+.slot{position:relative;flex:1;display:block;overflow:hidden;text-decoration:none;color:inherit;transition:flex .45s ease,filter .45s ease}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;transition:transform .6s ease}
+.slot .plate{position:absolute;left:0;right:0;bottom:84px;z-index:2;text-align:center;padding:0 12px;text-shadow:0 2px 12px #000c}
+.slot .choice{font-size:clamp(1.3rem,3.4vw,2.4rem);line-height:1.15}
+.slot .which{font-size:clamp(.8rem,1.6vw,1rem);color:#e7d9c4;margin-top:6px}
+.slot .cursor{display:inline-block;opacity:0;margin-right:.35em;transition:opacity .2s}
+.slot::after{content:"";position:absolute;inset:0;border:3px solid transparent;transition:border-color .3s;pointer-events:none}
+.slots:hover .slot:not(:hover),.slots.has-focus .slot:not(.active){filter:blur(5px) grayscale(.7) brightness(.45);flex:.72}
+.slot:hover,.slot.active{flex:1.28}
+.slot:hover img,.slot.active img{transform:scale(1.04)}
+.slot:hover .cursor,.slot.active .cursor{opacity:1;animation:blink 1s steps(2,start) infinite}
+.slot:hover::after,.slot.active::after{border-color:#d9a46c}
+.slot:focus-visible{outline:none}
+@keyframes blink{to{visibility:hidden}}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:16px;top:16px;z-index:5;background:#f3e9da;color:#120e0b;padding:6px 10px}
+.foot{position:absolute;right:12px;bottom:6px;z-index:4;font-size:.72rem;color:#9c8c78}
+.foot a{color:#c9b394}
+@media (max-width:640px){.slot .plate{bottom:96px}.slot .which{display:none}}
+@media (prefers-reduced-motion:reduce){.slot,.slot img,.slot::after{transition:none}.slot:hover img,.slot.active img{transform:none}.slot .cursor{animation:none}}
